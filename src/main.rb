@@ -1,5 +1,4 @@
 require 'treat'
-require_relative 'command'
 include Treat::Core::DSL
 
 class Interpret
