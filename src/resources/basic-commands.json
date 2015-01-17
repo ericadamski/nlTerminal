@@ -1,0 +1,130 @@
+{
+  "touch": "Create a new file. Usage: touch <filename>",
+  "cp": "Copy files.
+    Usage: cp [options] <source-filename> <destination-filename>
+           cp [options] <source-filepath> <destination filepath>",
+  "mv": "Move or Rename files or directories.
+    Usage: mv [options] <old-filepath> <new-filepath>
+           mv [options] <old-filename> <new-filename>",
+  "rm": "Remove files.
+    Usage: rm [options] <filname>",
+  "cat": "View complete file content. Usage: cat <filename>",
+  "more": "View file contents in sections determined by size of the terminal.
+    Usage: more <filename>",
+  "less": "View file contents in sections determined by size of the terminal.
+           Has more options and search features than more.
+    Usage: less [options] <filename>",
+  "compress": "Reduces the size of the file. and adds the extension .Z
+    Usage: compress <filename>.",
+  "uncompress/zcat": "Restores a compressed file.
+    Usage: uncompress <filename>
+    Usage: zcat <filename>",
+  "cd": "Change directory. Usage: cd <filename>",
+  "pwd": "Print working directory on the terminal.",
+  "ls": "List the content of a directory.
+    Usage: ls [options] or ls [options] <directory-path>",
+  "mkdir": "Create a new directory. Usage: mkdir <directory-path>",
+  "rmdir": "Remove a directory if its empty. Usage: rmdir <directory-path>",
+  "ln": "Create symbolic links between files or between directories.
+    Usage: ln [options] <file-to-be-linked> <new-file>
+           ln [options] <directory-to-be-linked> <my-directory>",
+  "clear": "Clears the terminal.",
+  "echo": "Write a string to standard output.
+    Usage: echo “string” or echo ‘string’",
+  "repeat": "Repeats commands. Usage: repeat <number> <command>",
+  "man": "Displays the manual page for the selected command.
+    Usage: man <command-name>",
+  "rtfm": "Displays the man page and help files ont he terminal.
+    Usage: rtfm <command-name>",
+  "history": "Lists the commands typed during the session.",
+  "hostname": "Displays the computer’s or server’s name on the terminal.",
+  "who": "Displays who is on the system.",
+  "whoami": "Displays the invoking user.",
+  "wc": "Counts and displays the number of lines, words and characters of a file.
+    Usage: wc [options] <filename>",
+  "date": "",
+  "cal": "",
+  "whatis": "Displays the command description. Usage: whatis <command>",
+  "whereis": "",
+  "which": "",
+  "apropos": "",
+  "id": "Displays the user id and the group id of the invoking user.",
+  "tty": "Displays users terminal name.",
+  "pipe": "| Pipe the output of a command to be processed by another command.",
+  "redirect": "> Redirect output........ to file (overwrite ).
+    Usage: command > filename",
+  "append": ">> Append (the result of the command) to the end of the file.
+    Usage: command >> file-name",
+  "input from file": "< Take the input for the command from a file.
+    Usage: command1 < filename.",
+  "run process in background": "& Run process in the backgound so
+                                that the shell remains active.
+    Usage: program-name &",
+  "chmod": "Set the permission on a file or a directory.
+    Usage: chmod [options] <who> <opcode> < permission> <filename>",
+  "fs": "quota Checking your percentage disk usage on your account.",
+  "fs lq": "Lists the amount and percentatge of disk on your account.",
+  "fs la": "Lists access control lists for directories.
+    Usage: fs la or fs la <directory-name>",
+  "fs sa": "Sets access control lists for directories.
+    Usage: Usage: fs sa <directory> <user> <permission>",
+  "ps": "Displays the active processes.",
+  "kill": "Terminates a process.
+    Usage: kill [options] <process-number>",
+  "bg": "Restarts process in the baground.",
+  "exec": "Executes a command in place of the current shell which terminates.
+    Usage: exec command-name.",
+  "lpr": "Sends a job to the printer.
+    Usage: lpr- P <printer-name> <file-name>",
+  "lpq": "Displays the printer queue including the job number.
+    Usage: lpq -P <printer-name>",
+  "lprm": "Removes a job from the printer queue.
+    Usage: lprm -P <printer-name> <job-number>",
+  "print": "Sends the job to the printer.
+    Usage: print -P <printer-name> <file-name>",
+  "env": "Show all the environment variables. Usage: env",
+  "printenv": "Show all or specified environment variable. Usage: printenv",
+  "setenv": "Sets a particular environment variable.
+    Usage: setenv <variable-name> <value>",
+  "alias": "Creates a shortcut for a command or series of commands.
+    Usage: alias displays all specified aliases.
+    Usage: alias <shortcut> <series of commands>",
+  "unalias": "Removes the alias from its bound commands.
+    Usage: unalias <shortcut>",
+  "set": "Sets variables in current shell.
+    Usage: set <variable>=<value>",
+  "unset": "Removes value form the variable.
+    Usage: unset <variable>",
+  "stty": "Set the option for a terminal.
+    Usage: stty erase <desired-key> character erase",
+  "chsh": "Change Shell.
+    Usage: chch <username> <newshell>",
+  "telnet": "Connects to a remote computer.",
+  "setenv DISPLAY": "Allows the remote host to display its x-applications onto
+                     the local terminal.
+    Usage: setenv DISPLAY <local-hostname or IP address>:0.0;",
+  "ftp": "File transfer program: Allows the get and put of files between computer
+          accounts.
+    Usage: ftp <remote-hostname>",
+  "finger": "Display information about local or remote users.
+    Usage: finger <user-name>
+           finger <user-id>",
+  "talk": "",
+  "write": "",
+  "grep": "Search a file for a matching pattern or regular expression.
+    Usage: grep [options] <regular-expression> <file-name>",
+  "fgrep": "A variation of grep that maches a text-string and does-not support
+            regular expressions.",
+  "spell": "",
+  "sort": "",
+  "head": "",
+  "tail": "",
+  "find": "Search the system for filenames. Usage: find <pathname> <condition>",
+  "split": "Splits a file into several files of equal length.
+    Usage: split [options] <filename> <outfile>.",
+  "cmp": "Compare 2 files. Usage: cmp <file1> <file2>",
+  "diff": "Reports the lines that differ between 2 files
+    Usage: diff <file> <file2>",
+  "join": "A database operator that joins the common lines of two sorted files.
+    Usage: join <file1> <file2>"
+}
