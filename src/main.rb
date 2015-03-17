@@ -1,5 +1,6 @@
 require 'treat'
 require 'json'
+require_relative 'brain'
 include Treat::Core::DSL
 
 class Interpret
@@ -7,6 +8,7 @@ class Interpret
   def initialize
     load_commands
     load_english_stopwords
+    @brain = Brain.new
   end
 
   def run
@@ -20,24 +22,23 @@ class Interpret
     if string.chomp.include? 'exit'
       exit
     end
-    #`#{string.chomp}` if is_word? string.chomp
-    @current_input = phrase string
-    @current_input.tokenize
-    #puts @current_input
-    @current_input.apply(:segment,
-      :parse,
-      :category).print_tree
-    keywords = remove_stopwords @current_input
-    puts "Keywords : #{keywords}" unless keywords.empty?
-    puts match_commands keywords unless keywords.empty?
-    #puts is_verb_phrase? @current_input
-    #puts is_noun_phrase? @current_input
-    #@current_input.each_word do |word|
-    #  puts word.category
-    #end
-    #for key in @commands['Commands'].keys do
-    #  puts "#{key.to_s}=>#{key.to_s.hypernyms}"
-    #end
+    if is_word? string.chomp
+      puts `#{string.chomp}`
+    else
+      @current_input = phrase string
+      @current_input.tokenize
+      #puts @current_input
+      @current_input.apply(:segment,
+        :parse,
+        :category).print_tree
+      keywords = remove_stopwords @current_input
+      #puts "Keywords : #{keywords}" unless keywords.empty?
+      puts @brain.make_descision( @current_input,
+        keywords,
+        match_commands(keywords) )
+      #puts is_verb_phrase? @current_input
+      #puts is_noun_phrase? @current_input
+    end
   end
 
   def is_word? (word)
@@ -61,13 +62,16 @@ class Interpret
     for command in @commands['Commands'] do
       relwords = 0
       hascontext = false
+      complete = keys.include? command[0]
       relwords =
         command[1]['keywords'].select { |word| keys.include? word }.length
       hascontext =
         command[1]['context']
           .select { |context| keys.include? context }.length > 0
       relevence[command[0]] = {:count => relwords,
-        :hascontext? => hascontext}
+        :hascontext? => hascontext,
+        :cmd => command,
+        :complete => complete}
     end
     return relevence.select { |cmd, info| info[:count] > 0 }
   end
@@ -94,11 +98,13 @@ class Interpret
 
   def load_commands
     File.expand_path File.dirname(__FILE__)
-    @commands = JSON.parse! File.read('resources/basic-commands.json')
+    @commands = JSON.parse! File.read(File.dirname(__FILE__) +
+      '/resources/basic-commands.json')
   end
 
   def load_english_stopwords
-    @stopwords = JSON.parse! File.read('resources/stopwords.json')
+    @stopwords = JSON.parse! File.read(File.dirname(__FILE__) +
+      '/resources/stopwords.json')
   end
 
   ## structure of commands

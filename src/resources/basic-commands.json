@@ -1,9 +1,11 @@
 {
   "Commands" : {
     "touch": {"description" : "Create a new file.",
+       "response": "I have created a new file called <name> for you.",
        "usage": [
          "Usage: touch <filename>"
          ],
+      "params": 1,
        "keywords": [
          "make",
          "create"
@@ -12,10 +14,12 @@
           "file"
         ]},
     "cp": {"description" : "Copy files.",
+      "response": "I have copied <files> for you.",
       "usage" : [
         "Usage: cp [options] <source-filename> <destination-filename>",
         " cp [options] <source-filepath> <destination filepath>"
         ],
+      "params": 2,
       "keywords": [
         "copy"
         ],
@@ -25,10 +29,12 @@
          "directory"
         ]},
     "mv": {"description" : "Move or Rename files or directories.",
+       "response": "I have moved <files> for you.",
        "usage": [
          "Usage: mv [options] <old-filepath> <new-filepath>",
          "mv [options] <old-filename> <new-filename>"
         ],
+        "params": 2,
         "keywords": [
           "move",
           "relocate",
@@ -40,9 +46,11 @@
            "directory"
          ]},
     "rm": {"description": "Remove files. ",
+       "response": "I have perminently remove <files> for you.",
        "usage": [
          "Usage: rm [options] <filname>"
         ],
+        "params": 1,
         "keywords": [
           "remove",
           "take away",
@@ -57,9 +65,11 @@
            "files"
          ]},
     "cat": {"description": "View complete file content.",
+       "response": "Here is the contense of <files> :",
        "usage": [
          "Usage: cat <filename>"
         ],
+        "params": 1,
         "keywords": [
           "show",
           "display",
@@ -70,9 +80,11 @@
            "files"
          ]},
     "less": {"description": "View file contents in sections determined by size of the terminal. Has more options and search features than more.",
+      "response": "Here is the contense of <file> :",
       "usage": [
         "Usage: less [options] <filename>"
       ],
+      "params": 1,
       "keywords": [
         "show less",
         "display less"
@@ -81,9 +93,11 @@
          "file"
        ]},
     "cd": {"description": "Change directory.",
+      "response": "You are now located at <directory>.",
       "usage": [
         "Usage: cd <filename>"
       ],
+      "params": 1,
       "keywords": [
         "change"
         ],
@@ -91,18 +105,22 @@
          "directory"
        ]},
     "pwd": {"description": "Print working directory on the terminal.",
+      "response": "You are currently located <directory>.",
       "usage":[],
       "keywords": [
         "location",
         "where am I"
         ],
+     "params": 0,
      "context": [
          "display"
        ]},
     "ls": {"description": "List the content of a directory.",
+      "response": "Here is a list of <directory>.",
       "usage": [
         "Usage: ls [options] or ls [options] <directory-path>"
       ],
+      "params": 1,
       "keywords": [
         "list",
         "show",
@@ -113,9 +131,11 @@
          "files"
        ]},
     "mkdir": {"description":"Create a new directory.",
+      "response": "I have created <directory> for you.",
       "usage": [
         "Usage: mkdir <directory-path>"
       ],
+      "params": 1,
       "keywords": [
         "create",
         "make"
@@ -124,9 +144,11 @@
          "directory"
        ]},
     "rmdir": {"description": "Remove a directory if its empty.",
+      "response": "I have deleted <directory> for you.",
       "usage": [
         "Usage: rmdir <directory-path>"
       ],
+      "params": 1,
       "keywords": [
         "remove",
         "take away",
@@ -140,10 +162,12 @@
          "directory"
        ]},
     "ln": {"description":"Create symbolic links between files or between directories.",
+      "response": "I have linked <files> for you.",
       "usage": [
         "Usage: ln [options] <file-to-be-linked> <new-file>",
         "ln [options] <directory-to-be-linked> <my-directory>"
       ],
+      "params": 2,
       "keywords": [
         "link",
         "tie",
@@ -154,7 +178,9 @@
          "directory"
        ]},
     "clear": {"description": "Clears the terminal.",
+      "reponse": "The screen is now clear <name>.",
       "usage": [],
+      "params": 0,
       "keywords": [
         "clear",
         "clean"
@@ -163,9 +189,11 @@
          "display"
        ]},
     "echo": {"descripion":"Write a string to standard output.",
+      "response": "<content>",
       "usage": [
         "Usage: echo “string” or echo ‘string’"
       ],
+      "params": 1,
       "keywords": [
         "repeat",
         "echo"
@@ -174,9 +202,11 @@
          "display"
        ]},
     "repeat": {"description":"Repeats commands.",
+      "response": "FINE!",
       "usage": [
         "Usage: repeat <number> <command>"
       ],
+      "params": 2,
       "keywords": [
         "repeat"
         ],
@@ -184,9 +214,11 @@
          "command"
        ]},
     "man": {"description": "Displays the manual page for the selected command.",
+      "response": "Here are the manuel pages for <command>.",
       "usage": [
         "Usage: man <command-name>"
       ],
+      "params": 1,
       "keywords": [
         "manuel",
         "instructions",
@@ -197,7 +229,9 @@
          "display"
        ]},
     "history": {"description": "Lists the commands typed during the session.",
+      "response": "I'm not so sure you want to look at this.",
       "usage": [],
+      "params": 0,
       "keywords": [
         "history",
         "account",
@@ -207,9 +241,11 @@
          "display"
        ]},
     "wc": {"description": "Counts and displays the number of lines, words and characters of a file.",
+      "response": "The number of <type> in <file> is :",
       "usage": [
         "Usage: wc [options] <filename>"
         ],
+      "params": 1,
       "keywords": [
         "enumerate",
         "count",
@@ -219,9 +255,11 @@
          "file"
        ]},
     "kill": {"desciption": "Terminates a process.",
+      "response": "I will <random> <process> now.",
       "usage": [
         "Usage: kill [options] <process-number>"
         ],
+      "params": 1,
       "keywords": [
         "kill",
         "stamp out",
@@ -234,9 +272,11 @@
          "process"
        ]},
     "exec": {"description": "Executes a command in place of the current shell which terminates.",
+      "response": "I will <matching> <command>.",
       "usage": [
         "Usage: exec command-name."
         ],
+      "params": 1,
       "keywords": [
         "execute",
         "run",
@@ -247,9 +287,11 @@
          "command"
        ]},
     "grep": {"desciprtion": "Search a file for a matching pattern or regular expression.",
+      "response": "Here are the results of your search :",
       "usage": [
         "Usage: grep [options] <regular-expression> <file-name>"
         ],
+      "params": 2,
       "keywords": [
         "search",
         "look for"
@@ -258,9 +300,11 @@
          "file"
        ]},
     "find": {"description": "Search the system for filenames.",
+      "response": "Here are the results of your search :",
       "usage": [
         "Usage: find <pathname> <condition>"
         ],
+      "params": 2,
       "keywords": [
         "search",
         "look for"
@@ -269,9 +313,11 @@
          "directory"
        ]},
     "diff": {"description": "Reports the lines that differ between 2 files",
+      "response": "Here are the differences of <files> :",
       "usage": [
         "Usage: diff <file> <file2>"
         ],
+      "params": 2,
       "keywords": [
         "compare",
         "liken",
