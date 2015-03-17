@@ -25,4 +25,6 @@ opt_parser = OptionParser.new do |opt|
   end
 end
 
+puts opt_parser if ARGV.empty?
+
 opt_parser.parse!
