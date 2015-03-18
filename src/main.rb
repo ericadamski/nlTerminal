@@ -33,9 +33,7 @@ class Interpret
         :category).print_tree
       keywords = remove_stopwords @current_input
       #puts "Keywords : #{keywords}" unless keywords.empty?
-      puts @brain.make_descision( @current_input,
-        keywords,
-        match_commands(keywords) )
+      @brain.make_descision @current_input, keywords, @commands
       #puts is_verb_phrase? @current_input
       #puts is_noun_phrase? @current_input
     end
@@ -51,29 +49,6 @@ class Interpret
       nonstop.push word.to_s unless @stopwords['stopwords'].include? word.to_s
     end
     return nonstop
-  end
-
-  def match_commands (keys)
-    ## get all commands which contain any of the key words
-    ## count the number of key words which it contains
-    ## check the context for more information, maybe the context is included
-    ##   in the keywords
-    relevence = {}
-    for command in @commands['Commands'] do
-      relwords = 0
-      hascontext = false
-      complete = keys.include? command[0]
-      relwords =
-        command[1]['keywords'].select { |word| keys.include? word }.length
-      hascontext =
-        command[1]['context']
-          .select { |context| keys.include? context }.length > 0
-      relevence[command[0]] = {:count => relwords,
-        :hascontext? => hascontext,
-        :cmd => command,
-        :complete => complete}
-    end
-    return relevence.select { |cmd, info| info[:count] > 0 }
   end
 
   def is_verb_phrase? (phrase)

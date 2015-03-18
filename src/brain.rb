@@ -7,7 +7,9 @@ class Brain
     @unknowns = [
       "Great question. I’m just not familiar enough with it to hazard a guess."
     ]
-    @classifier = StuffClassifier::TfIdf.new "brain"
+    store = StuffClassifier::FileStorage.new(
+      File.expand_path File.dirname(__FILE__) + '/resources/.brain' )
+    @classifier = StuffClassifier::TfIdf.new "brain", :storage => store
     train
   end
 
@@ -33,6 +35,20 @@ class Brain
     @classifier.train(:process, "Stop the process number 9082.")
     @classifier.train(:directory, "List all the files in the current directory.")
     @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
+    @classifier.train(:directory, "Show me all the files.")
     @classifier.train(:directory, "Is there a file called blue?")
     @classifier.train(:directory, "Copy all the files.")
     @classifier.train(:directory, "Move all the files.")
@@ -40,10 +56,14 @@ class Brain
     @classifier.train(:directory, "Move this directory.")
     @classifier.train(:directory, "Remove this directory.")
     @classifier.train(:directory, "Delete the directory called .")
+    @classifier.train(:directory, "Find me a file called this.")
+    @classifier.train(:directory, "Is there a file called?")
+    @classifier.train(:directory, "Can you find the file called.")
     @classifier.train(:directory, "Find a file called this.")
     @classifier.train(:directory, "Search for a file called jim.")
     @classifier.train(:directory, "What directory am I in?")
     @classifier.train(:directory, "Where am I?")
+    @classifier.train(:directory, "show me the contense of this directory")
     @classifier.train(:directory, "Change my location to here.")
     @classifier.train(:display, "Display this string here.")
     @classifier.train(:display, "Clear the screen.")
@@ -77,40 +97,23 @@ class Brain
     @classifier.train(:command, "Start this program.")
     @classifier.train(:command, "Execute list.")
     @classifier.train(:command, "Run the program.")
+    @classifier.save_state
   end
 
-  def make_descision (phrase, keywords, likely_commands)
-    puts @classifier.classify phrase.to_s
-    if phrase.to_s.include? '?'
-      re_inforce "question"
-    end
+  def make_descision (phrase, keywords, commands)
+    classification = @classifier.classify phrase.to_s
+    classification.nil? ? formulat_response( "unknown" )
+      : match_commands( keywords, classification, commands )
+  end
 
-    if phrase.to_s.downcase.eql? "who are you?"
-      return whats_my_name?
-    end
+  def match_commands (keys, classification, commands)
+    relevence = {}
+    ## filter out the commands which are not of the class type
+    puts "#{classification}"
+    relevence = commands['Commands'].select { |cmd, info| info['context']
+      .include? "#{classification}" }
 
-    if phrase.to_s.downcase.eql? "who am I?"
-      return whats_your_name?
-    end
-
-    if keywords.empty?
-      formulat_response "unknown"
-    end
-
-    case likely_commands.length
-      when 1
-        formulat_response likely_commands.first
-
-      else
-        if likely_commands.any? {|cmd, info| info['complete'] }
-          descision =
-            likely_commands.select { |cmd, info| info['complete'] }.first
-          return formulat_response descision if re_inforce descision
-        end
-        #likely = compare_to_description keywords, likely_commands
-        #max = likely.values.max
-    end
-    return formulat_response "unknown"
+    relevence.map { |cmd, info| puts cmd }
   end
 
   def store_descision (descision)
@@ -120,12 +123,12 @@ class Brain
   def re_inforce (descision)
     ## ask user if I selected the correct operation
     case descision
-      when "question"
+      when 'question'
         print "Are you tring to ask me a question? \n\n"
       else
         print "Are you asking me to #{descision[1]['cmd'][1]['description']}? "
     end
-    gets.chomp.downcase.eql? "yes" ? true : false
+    gets.chomp.downcase.eql? 'yes' ? true : false
   end
 
   def whats_my_name?
