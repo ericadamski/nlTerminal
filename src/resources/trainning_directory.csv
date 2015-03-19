@@ -1,0 +1,38 @@
+ls,List all the files in the current directory
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the folders
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the folders
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the files
+ls,Show me all the folders
+ls,Show me all the files
+find,Is there a file called *
+cp,Copy all the files
+mv,Move all the files
+cp,Copy this directory to *
+mv,Move this directory
+rmdir,Remove this directory
+rmdir,Delete the directory called *
+find,Find me a file called *
+ls,Is there a file called *
+find,Can you find the file called *
+find,Find a file called *
+find,Search for a file called *
+ls,show me the contents of this directory
+cd,Change my location to *
+mkdir,create a directory called *
+mkdir,create a folder called *
+mv,Move all the folders
+cp,Copy all the folders
+ls,Show me a few files
+ls,list the files from *
+ls,show me the files from *
+ls,show me the files in my current directory

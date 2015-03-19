@@ -115,6 +115,16 @@
      "context": [
          "display"
        ]},
+    "whoami": {"description": "Print current user on the terminal.",
+      "response": "<content>",
+      "usage": [],
+      "keywords": [
+        "who am i"
+      ],
+      "params": 0,
+      "context": [
+        "display"
+      ]},
     "ls": {"description": "List the content of a directory.",
       "response": "Here is a list of <directory>.",
       "usage": [

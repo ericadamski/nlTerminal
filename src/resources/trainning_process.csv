@@ -1,0 +1,4 @@
+kill,Kill *
+kill,Kill a process called *
+kill,Stop a process called *
+kill,Stop the process number *

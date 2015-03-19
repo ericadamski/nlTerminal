@@ -1,0 +1,19 @@
+echo,Display * here
+echo,echo *
+clear,Clear the screen
+clear,Clear
+clear,Clean the display
+man,How do I look at all the files?
+man,Can you show me the manual pages for
+man,How do I change the directory I am in?
+pwd,what directory am I in?
+pwd,what is my present directory?
+pwd,what is my current location?
+pwd,where am I?
+history,show me the bash history
+history,show me my history
+whoami,who am I?
+whoami,what is my username?
+man,what does * do
+whoami,who am I?
+whoami,who am I?

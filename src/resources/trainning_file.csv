@@ -1,0 +1,29 @@
+touch,Create a file called *
+touch,Create a file
+cat,Concat some file called *
+cat,Show me the contents of *
+cp,Copy four of the files
+mv,Move all of the files to a difference location
+less,Show me less of *
+rm,Remove a file called *
+rm,Remove some more files
+touch,Create ten files
+less,Show me only some of *
+ln,Link * to *
+wc,Count the number of lines in *
+wc,Count the number of characters in *
+grep,Search the file for *
+grep,Search a file for all strings that match *
+diff,What is the difference between * and *?
+diff,Is there difference between * and *?
+rm,Delete the file called *
+touch,Add a file called *
+rm,Delete a file called *
+cat,What is inside the file *?
+cat,Show me the contents of *
+cp,Please copy * over here
+mv,Move * over
+ln,Link * to here
+wc,How many lines are in the file *?
+wc,Count the number of lines in * please
+cat,(WRB how) of assignment2.c

@@ -54,7 +54,6 @@ class Interpret
   def is_verb_phrase? (phrase)
     ## if the fist part of the phrase given is a verb phrase
     ## then this is part of a command.
-    ## note that somethings are not verb phrases. i.e run something maybe
     count = 0
     for vp in phrase do
       return true if count < 1 and vp.tag == "VP"
@@ -81,13 +80,4 @@ class Interpret
     @stopwords = JSON.parse! File.read(File.dirname(__FILE__) +
       '/resources/stopwords.json')
   end
-
-  ## structure of commands
-  #
-  # <verb> ... <noun> <verb> <adjective>
-  # do something
-  # do something do something else ...
-  # do something with something
-  #
-  ##
 end

@@ -1,0 +1,91 @@
+file,Create a file
+file,Concat a file
+directory,Show me a few files
+file,Show me the contents of a file
+file,Copy four of the files
+file,Move all of the files to a difference location
+file,Show me less of that file
+file,Remove a file called *
+file,Remove some more files
+file,Create ten files
+file,Show me only some of *
+file,Link * to *
+process,Kill *
+process,Kill a process called *
+process,Stop a process called *
+process,Stop the process number *
+directory,create a folder called *
+directory,List all the files in the current directory
+directory,Show me all the folders
+directory,list the files from *
+directory,show me the files from *
+directory,Show me all the files
+directory,Show me all the folders
+directory,Show me all the files
+directory,Show me all the files
+directory,Show me all the files
+directory,Show me all the files
+directory,Show me all the files
+directory,Show me all the files
+directory,Show me all the files
+directory,Show me all the folders
+directory,Show me all the files
+directory,Show me all the files
+directory,show me the files in my current directory
+directory,Is there a file called *
+directory,Copy all the files
+directory,Move all the folders
+directory,Copy all the folders
+directory,Move all the files
+directory,Copy this directory to *
+directory,Move this directory
+directory,Remove this directory
+directory,Delete the directory called *
+directory,Find me a file called *
+directory,Is there a file called *
+directory,Can you find the file called *
+directory,Find a file called *
+directory,Search for a file called *
+display,What directory am I in?
+display,Where am I?
+directory,show me the contents of this directory
+directory,Change my location to *
+display,Display * here
+display,echo *
+display,what is my present directory?
+display,Clear the screen
+display,Clear
+display,what is my current location?
+display,where am I?
+display,Clean the display
+display,what does * do
+display,How do I look at all the files?
+display,Can you show me the manual pages for *
+display,How do I change the directory I am in?
+file,Count the number of lines in *
+file,Count the number of characters in *
+file,Search the file for *
+file,Search a file for all strings that match *
+file,What is the difference between * and *?
+file,Is there difference between *?
+file,Delete the file called *
+file,Add a file called *
+file,Delete a file called *
+file,What is inside *?
+file,Show me the contents of *
+file,Please copy the file over *
+file,Move a file over *
+file,Link * to here
+file,How many lines are in *?
+file,Count the number of lines in * please
+command,Execute * please
+command,Run *
+command,Start *
+command,Run *
+command,Start *
+command,Execute *
+command,Run *
+command,Repeat * 20 times
+display,who am I?
+display,who am I?
+file,(WRB how) of assignment2.c
