@@ -109,12 +109,12 @@ class Brain
     path = File.expand_path File.dirname(__FILE__) +
       "/resources/trainning_#{context}.csv"
 
-    File.open(path, 'a').puts "#{command.first()[0]},#{phrase}"
+    File.open(path, 'a').puts "#{command.first()[0]},#{phrase.to_s}"
 
     path = File.expand_path File.dirname(__FILE__) +
       "/resources/trainning_data.csv"
 
-    File.open(path, 'a').puts "#{context},#{phrase}"
+    File.open(path, 'a').puts "#{context},#{phrase.to_s}"
 
     train # I may change this, but for now the files are small enough that it
           # won't impact the performance

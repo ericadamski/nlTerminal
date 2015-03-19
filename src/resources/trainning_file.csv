@@ -26,4 +26,3 @@ mv,Move * over
 ln,Link * to here
 wc,How many lines are in the file *?
 wc,Count the number of lines in * please
-cat,(WRB how) of assignment2.c
