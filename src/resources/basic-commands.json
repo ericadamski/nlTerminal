@@ -126,7 +126,7 @@
         "display"
       ]},
     "ls": {"description": "List the content of a directory.",
-      "response": "Here is a list of <directory>.",
+      "response": "Here is a list of files in <directory>.",
       "usage": [
         "Usage: ls [options] or ls [options] <directory-path>"
       ],
@@ -188,7 +188,7 @@
          "directory"
        ]},
     "clear": {"description": "Clears the terminal.",
-      "reponse": "The screen is now clear <name>.",
+      "response": "The screen is now clear <name>.",
       "usage": [],
       "params": 0,
       "keywords": [

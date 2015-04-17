@@ -30,7 +30,7 @@ class Interpret
       #puts @current_input
       @current_input.apply(:segment,
         :parse,
-        :category).print_tree
+        :category)
       keywords = remove_stopwords @current_input
       #puts "Keywords : #{keywords}" unless keywords.empty?
       @brain.make_descision @current_input, keywords, @commands

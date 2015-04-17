@@ -23,6 +23,7 @@ directory,Show me all the files
 directory,Show me all the folders
 directory,Show me all the files
 directory,Show me all the files
+directory,change directory to *
 directory,Show me all the files
 directory,Show me all the files
 directory,Show me all the files
@@ -88,4 +89,10 @@ command,Run *
 command,Repeat * 20 times
 display,who am I?
 display,who am I?
-file,(WRB how) of assignment2.c
+display,I can not see
+display,I can not see!
+display,I can not see
+display,i ca n't see
+display,what is my bash history?
+display,what is my history?
+display,who am I?

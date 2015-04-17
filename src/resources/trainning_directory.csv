@@ -27,7 +27,8 @@ find,Can you find the file called *
 find,Find a file called *
 find,Search for a file called *
 ls,show me the contents of this directory
-cd,Change my location to *
+cd,change my location to *
+cd,change directory to *
 mkdir,create a directory called *
 mkdir,create a folder called *
 mv,Move all the folders
