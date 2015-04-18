@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[hmargin=0.8in,vmargin=0.8in]{geometry}\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{url}
+
+\setlength{\topskip}{0mm}\setlength{\parskip}{1em}\setlength{\parindent}{0em}
+\usepackage{enumitem}\setlist{nolistsep}
+
+\usepackage{natbib}
+\setlength{\bibsep}{0.0pt}
+
+\title{A Natural Language Terminal}
+\author{Eric Adamski}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introduction.}
+
+Use of low level computer commands is necessary for a computers function and commonly used by people whose profession revolves around computer systems. These core system commands are what has built modern computer software, and are still useful today. These commands and the interface from which they are used is foreign for inexperienced lay people. Having to learn and memorize computer commands for simple actions, which on modern systems have a graphical wrapper added for ease of use, seems disadvantageous. By creating a platform from which lay people can utilize the these commands, users would have a more personal relationship with their respective machine resulting in enhanced user experience. This would allow lay people to access powerful computer operations using their natural language which is more comfortable and convenient.
+
+\subsection{Motivation.}
+
+This project will provide a more natural environment for inexperienced users of personal computers to interact via a comfortable medium. One will be able to communicate complex operations using natural language to the system and have it respond with easy to understand and properly formed english sentences. It will attempt to provide a more personal relationship with the machine via learning of the users behaviours and speech preferences.\cite{ogden} A simple example would be creating a directory, or folder, in a system. Normally an experienced user would understand the options of the 'mkdir' command, within the proposed system one could ask the system, "Could you please create a folder called NewFolder.", and the system will understand and execute the proper set of commands to complete the task. In the example above instead of saying, "... create a folder called NewFolder." one could also say, " ... create a folder named NewFolder.", so that any adjective which means to name could be used in place of named, or called. This feature would improve the overall user experience of the system by allowing the user some leeway when it comes to explaining their needs.\cite{kelly} I will break down input phrases into parse trees then search for adjectives paired with nouns and then match to a set of keywords for each command.
+
+The use of computer terminals is reserved for those whose career is focused on computers. The objective of this system would be to open the use of computer terminals and their capabilities to the general public while building a more personal relationship and easing the use of these systems. Using natural language processing and artificial neural networks this system will allow the computer to build a relationship with its users and increase efficiency as well as the appeal of using low level computer commands.
+
+%what this paper will cover
+
+\section{Background.}
+
+%background of humans and computers
+%background on NLP
+
+\section{Method.}
+
+%how I wrote it
+%%  - talk about Stanford NLP library and parse trees
+%%  - talking about nieve bayseian classifier used for deciding
+
+\section{Results.}
+
+% what as been implemented
+% the statistics, and accuracy
+
+\section{Furture Work.}
+
+% different techniques (taken from \cite{matuszek})
+% better layout
+
+\section{Conclusion}
+
+%wrapping up cover what should of been done, what had been done, maybe if it is actually easier to use :p
+
+Mobile devices and technology are exploding,
+where the number of mobile devices
+is expected to exceed the number of people on Earth by
+2014\footnote{\url{http://blogs.cisco.com/sp/the-future-of-monetizing-mobility/}}.
+% and wireless carriers globally
+% obtain \$1.3 trillion in revenue each year.
+%outside of computer science
+%Major industries
+%utilize mobile technologies,
+%where the U.S. military have over 250,000 mobile devices in
+%use, %\footnote{\url{http://www.informationweek.com/government/mobile/dod-pushes-militarys-mobile-strategy-for/240010603}}
+Mobile security has become a serious concern due to the sensitive
+information mobile devices contain and the critical systems mobile
+devices control. %, such as GPS locations of soldiers.
+% Compromising mobile devices grants hackers access
+% and control to critical information and cyber-physical systems,
+% and compromising mobile devices raises major security concerns.
+In {\it the military}, the GPS locations and identities of
+deployed military members can be obtained.
+In {\it manufacturing}, computer-aided manufacturing tools can be
+controlled with a mobile device,
+allowing an attacker to silently alter the manufacturing process,
+as I have studied \cite{turner2013bad}.
+In {\it healthcare}, patients can rely on glucose monitors on
+mobile devices, allowing an attacker to send false reports and harm patients.
+\textit{Low malware detection rates are an \textbf{open research problem.}}
+A study of thousands of real Android malware samples in 2011 show
+that industry antimalware software detect
+79.6\% of the malware in the best case and
+20.2\% in the worst case \cite{zhou2012dissecting}.
+
+\newpage
+\bibliographystyle{abbrv}
+\bibliography{references}
+
+\end{document}
