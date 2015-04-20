@@ -4,6 +4,35 @@ A natural language terminal application written in Ruby, parses and executes UNI
 
 A paper describing the project is included in the [Paper](https://github.com/ericadamski/nlTerminal/blob/master/paper/A_Natural_Language_Terminal.pdf) directory.
 
+Supported commands are as follows :
+
+>Note: the program, as is, will only output the command which it choses to execute, the actual command is not executed.
+
+- touch
+- cp
+- mv
+- rm
+- cat
+- less
+- cd
+- pwd
+- whoami ( not well supported )
+- ls
+- mkdir
+- rmdir
+- ln
+- clear
+- echo
+- repeat
+- man
+- history
+- wc
+- kill
+- exec
+- grep
+- find
+- diff
+
 #### To Run
 
 > The latest version of ruby must be installed. As well as the latest Stanford NLP release.
