@@ -2,7 +2,7 @@
 
 require 'optparse'
 require_relative 'main'
-#Treat::Core::Installer.install 'english'
+Treat::Core::Installer.install 'english'
 
 options = {}
 

@@ -71,11 +71,12 @@ class Brain
           :cmds => commands})
       else
         cmd = @cmd_classifiers["#{classification}"].classify phrase.to_s
-        format_response formulat_response(
-          commands['Commands'].select{ |command, info|
-            command == cmd.to_s }.first(), keywords, phrase.to_s)
+        #format_response formulat_response(
+        #  commands['Commands'].select{ |command, info|
+        #    command == cmd.to_s }.first(), keywords, phrase.to_s)
       end
     end
+    cmd
   end
 
   def match_commands (keys, classification, commands)

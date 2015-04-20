@@ -9,6 +9,7 @@ class Interpret
     load_commands
     load_english_stopwords
     @brain = Brain.new
+    get_stats
   end
 
   def run
@@ -80,4 +81,33 @@ class Interpret
     @stopwords = JSON.parse! File.read(File.dirname(__FILE__) +
       '/resources/stopwords.json')
   end
+
+  def get_stats
+    lines = []
+
+    file_names = [
+      'trainning_command.csv',
+      'trainning_directory.csv',
+      'trainning_display.csv',
+      'trainning_file.csv',
+      'trainning_process.csv'
+    ]
+
+    for file_name in file_names do
+      path = File.expand_path File.dirname(__FILE__) +
+        "/resources/#{file_name}"
+
+      File.open(path).each_line { |line|
+        lines.push line
+      }
+    end
+
+    while lines.any?
+      line = lines.sample
+      lines.delete line
+      line = line.split ','
+      puts "#{interpret_garble(line[1])} #{line[0]}"
+    end
+  end
+
 end
