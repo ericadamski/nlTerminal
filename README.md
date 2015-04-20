@@ -2,7 +2,7 @@
 
 A natural language terminal application written in Ruby, parses and executes UNIX commands given english sentences.
 
-A paper describing the project is included in the [Paper](https://github.com/ericadamski/nlTerminal/tree/master/paper) directory.
+A paper describing the project is included in the [Paper](https://github.com/ericadamski/nlTerminal/blob/master/paper/A_Natural_Language_Terminal.pdf) directory.
 
 #### To Run
 
